@@ -1,0 +1,9 @@
+---
+- name: Ensure config
+  replace:
+    dest: '{{ kernel_config_file }}'
+    backup: yes
+    regexp: (^\s+(kernel|linux16)(\s+(?!{{ item.option }}{% if item.value is defined %}={{ item.value }}{% endif %})[\w=/\-\.]+)*)\s*$
+    replace: \1 {{ item.option }}{% if item.value is defined %}={{ item.value }}{% endif %}
+  register: kernel_config_state
+  with_items: kernel_config
