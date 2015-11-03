@@ -36,6 +36,8 @@ Ensure NUMA and transparent hugepages are disabled
       value: never
     - option: numa
       value: 'off'
+    - option: elevator
+      value: deadline
   roles:
   - role: kernel
 ```
