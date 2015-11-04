@@ -7,11 +7,16 @@ Ansible Kernel role
 
 # Introduction
 
-Ensure kernel parameters to be placed in Grub config.
+Ensure kernel configuration.
+
+Features:
+- Ensure parameters in grub.conf
+- Ensure parameters using sysctl
 
 # Requirements
 - Ansible 1.6
 - Linux system using Grub
+- RedHat based Linux distribution 5 or greater
 
 # Variables
 | Name | Description | Default |
