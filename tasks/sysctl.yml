@@ -4,7 +4,7 @@
     name: '{{ item.1.name }}'
     value: '{{ item.1.value }}'
     state: '{{ item.1.state | default("present") }}'
-    sysctl_file: '{{ kernel_parameter_config_file_path }}/{{ item.0.filename | default(kernel_parameter_config_file_name) }}'
+    sysctl_file: '{% if ansible_distribution_major_version|int > 6 %}{{ kernel_parameter_config_file_path }}/{{ item.0.filename | default(kernel_parameter_config_file_name) }}{% else %}{{ kernel_parameter_config_file_path }}/{{ kernel_parameter_config_file_name }}{% endif %}'
   ignore_errors: true
   with_subelements:
   - kernel_parameters
