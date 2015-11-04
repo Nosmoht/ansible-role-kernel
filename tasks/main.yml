@@ -10,3 +10,6 @@
 
 - include: config.yml
   tags: kernel_config
+
+- include: sysctl.yml
+  tags: kernel_parameters

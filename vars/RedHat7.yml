@@ -1,3 +1,5 @@
 ---
 kernel_config_file: /boot/grub2/grub.cfg
 kernel_grub_regexp: ^menuentry
+kernel_parameter_config_file_path: /etc/sysctl.d
+kernel_parameter_config_file_name: 99-ansible.conf

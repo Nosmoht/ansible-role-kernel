@@ -3,3 +3,4 @@ kernel_scheduler: cfq
 kernel_config:
 - option: elevator
   value: '{{ kernel_scheduler }}'
+kernel_parameters: []
