@@ -1,5 +1,5 @@
 ---
 kernel_config_file: /boot/grub/grub.conf
 kernel_grub_regexp: ^title
-kernel_parameter_config_file_path: /etc/sysctl.d
-kernel_parameter_config_file_name: 99-ansible.conf
+kernel_parameter_config_file_path: /etc
+kernel_parameter_config_file_name: sysctl.conf
