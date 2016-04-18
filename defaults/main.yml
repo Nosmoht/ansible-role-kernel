@@ -4,3 +4,4 @@ kernel_config:
 - option: elevator
   value: '{{ kernel_scheduler }}'
 kernel_parameters: []
+kernel_parameter_config_file: '{{ kernel_parameter_config_file_path }}/{{ kernel_parameter_config_file_name }}'
