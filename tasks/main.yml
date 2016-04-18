@@ -7,6 +7,7 @@
   - '{{ ansible_os_family }}.yml'
   tags:
   - kernel_config
+  - kernel_parameters
 
 - include: config.yml
   tags: kernel_config
